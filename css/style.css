@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: rgb(0, 102, 236);
+    --secondary-color: rgb(55, 245, 55);
+}
+body {
+    font-family: sans-serif;
+    color: rgb(83, 83, 83);
+}
+.header {
+    text-align: center;
+    border-bottom: 2px solid var(--primary-color);
+    background-color: #fff;
+
+}
+.header h1 {
+    margin: 0px 30px !important;
+    padding: 4px !important;
+}
+.header h2 {
+    text-transform: uppercase;
+    font-size: 110%;
+}
+.container {
+    width: 500px;
+    border: 1px solid var(--primary-color);
+    padding: 20px;
+    padding-bottom: 40px;
+    margin: 40px auto;
+    text-align: center;
+    transition: 200ms ease box-shadow;
+    background-color: #fff;
+}
+.container:hover {
+    box-shadow: 8px 8px var(--secondary-color);
+}
+
+label {
+    display: block;
+    margin: 20px 0
+}
+
+select {
+    width: 40%;
+    text-align: center;
+    border: 1px solid rgb(194, 190, 190);
+    border-radius: 0;
+    border-color: var(--primary-color);
+    background-color: white;
+    padding: 4px;
+    text-transform: uppercase;
+}
+input {
+    width: 40%;
+    border: 1px solid var(--primary-color);
+    border-radius: 0;
+    height: 30px;
+    padding: 4px;
+}
+button {
+    font-size: larger;
+    border: 2px solid rgb(194, 190, 190);
+    padding: 8px;
+    transition: 200ms ease border-color,
+                200ms ease color;
+}
+button.blue:hover {  
+    border-color: var(--primary-color);
+    color: rgb(0, 84, 194);
+}
+
+
+.prispeli-podaci, .obrada-podataka {
+    margin: 20px 0; 
+}
+ul {
+    list-style: none;
+}
+h1 {
+    margin: 20px 30px;
+    border-bottom: 1px solid gray;
+}
+h2 {
+    font-size: 120%;
+    margin: 15px 0;
+}
+
+/* INFO CSS */
+.prispeli-podaci ul {
+    border: 1px solid gray;
+    padding: 10px;
+    max-width: 75%;
+    
+    margin: auto;
+}
+
+.xml {
+    position: absolute;
+    top: 200px;
+    right: 30px;
+}
+.xml button {
+    border-color: var(--primary-color);
+    transition: border-color 200ms ease;
+}
+.xml button:hover {
+    border-color: var(--secondary-color);
+    cursor: pointer;
+}

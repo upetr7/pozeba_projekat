@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sadnice>
+    <sadnica>
+        <naziv>Крушка</naziv>
+        <lokacija>Чачак</lokacija>
+        <opis>Опис за крушку - Чачак</opis>
+    </sadnica>
+    <sadnica>
+        <naziv>Јабука</naziv>
+        <lokacija>Ариље</lokacija>
+        <opis>Опис за јабуку - Ариље</opis>
+    </sadnica>
+    <sadnica>
+        <naziv>Шљива</naziv>
+        <lokacija>Ваљево</lokacija>
+        <opis>Опис за шљиву - Ваљево</opis>
+    </sadnica>
+    <sadnica>
+        <naziv>Шљива</naziv>
+        <lokacija>Краљево</lokacija>
+        <opis>Опис за шљиву - Краљево</opis>
+    </sadnica>
+    <sadnica>
+        <naziv>Трешља</naziv>
+        <lokacija>Ваљево</lokacija>
+        <opis>Опис за трешњу - Ваљево</opis>
+    </sadnica>
+</sadnice>
+

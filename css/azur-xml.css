@@ -1,0 +1,92 @@
+.container {
+    width: 820px;
+}
+.choose-frm {
+    margin-bottom: 40px;
+}
+.choose-frm ul {
+    display: flex;
+    justify-content: space-around;
+}
+.choose-frm ul li{
+    width: 100%;
+    border-bottom: 1px solid gray;
+    padding: 20px;
+    font-size: 120%;
+    font-weight: bold;
+
+    transition: border-color 200ms ease;
+}
+.choose-frm ul li:hover {
+    cursor: pointer;
+    border-color: blue
+}
+.choose-frm ul li.green {
+    animation: show-up 200ms ease-in 1ms 1 forwards
+}
+form {
+    border: 1px solid gray;
+}
+.fields-nm {
+    border-bottom: 1px solid gray;
+    padding: 4px;
+    font-size: 105%;
+}
+.fields-nm ul {
+    display: flex;
+    justify-content: space-around;
+}
+.fields-vl {
+    border: 1px solid transparent;
+    margin: 4px;
+    display: flex;
+    justify-content: space-around;
+    padding: 6px 2px;
+    transition: border-color 200ms ease;
+}
+.fields-vl:hover {
+    border-color: gray;
+}
+input {
+    width: 22%;
+    font-size: 110%;
+}
+
+.delete {
+    width: 30px;
+    height: 30px;
+    padding: 4px;
+    border: 1px solid gray;
+    transition: color 200ms ease,
+                border-color 200ms ease;
+}
+.delete:hover {
+    cursor: pointer;
+    color: red;
+    border-color: red;
+}
+
+.successful-update {
+    position: absolute;
+    top: 200px;
+    border: 1px solid red;
+    background-color: #fff;
+}
+
+.green {
+    border-color: green;
+}
+.red {
+    border-color: red;
+}
+
+/* ANIMATION */
+@keyframes show-up {
+    from {
+        background-color: #fff;
+    }
+    to {
+        color: #fff;
+        background-color: var(--secondary-color);
+    }
+}
