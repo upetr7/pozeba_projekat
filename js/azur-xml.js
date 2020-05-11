@@ -7,8 +7,18 @@ const pozebe = document.querySelectorAll('.choose-frm li')[1]
 // FUNC
 function deleteField() {
     let parent = this.parentElement
-    console.log(parent)
+    let frm = parent.parentElement
+    console.log(frm);
+    console.log(frm.children.length);
     parent.remove()
+    // ako nakog svog brisanja ostane poslednji 
+    // onda prikazi .delete    
+    // 2 zbog fields-nm 
+    if(frm.children.length == 2) 
+        frm.children[1].querySelector('.delete').style.visibility = 'hidden'
+    // ako ima vise od 1 onda prvom dodaj visibility
+    if(frm.children.length > 2) 
+        frm.children[1].querySelector('.delete').style.visibility = 'visible'
 }
 
 // SADNICE POZEBE ANIMATION
