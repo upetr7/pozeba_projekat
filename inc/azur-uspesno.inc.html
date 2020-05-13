@@ -1,3 +1,18 @@
 <div class="successful-update">
-    <p>Uspesno ste azurirali XML</p>
+    <div class="successful-update-flex">
+        <p>Uspesno ste azurirali XML</p>
+        <div class="delete">X</div>
+    </div>
 </div>
+<script>
+    let succUpdate = document.querySelector('.successful-update')
+    let delet = succUpdate.querySelector('.delete')
+
+    succUpdate.style.marginLeft = ((window.innerWidth / 2) - 50).toString() + 'px';
+    window.addEventListener('resize', () => {
+        succUpdate.style.marginLeft = ((window.innerWidth / 2) - 50).toString() + 'px';
+    })
+    delet.addEventListener('click', () => {
+        succUpdate.remove()
+    })
+</script>

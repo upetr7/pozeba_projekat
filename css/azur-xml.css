@@ -1,6 +1,14 @@
+body {
+    position: relative;
+}
 .container {
     width: 820px;
+    min-height: 600px;
 }
+form, button {
+    display: none;
+}
+
 .choose-frm {
     margin-bottom: 40px;
 }
@@ -15,7 +23,9 @@
     font-size: 120%;
     font-weight: bold;
 
-    transition: border-color 200ms ease;
+    transition: border-color 200ms ease,
+                background-color 200ms ease,
+                color 200ms ease;
 }
 .choose-frm ul li:hover {
     cursor: pointer;
@@ -53,24 +63,42 @@ input {
 }
 
 .delete {
-    width: 30px;
-    height: 30px;
-    padding: 4px;
+    width: 25px;
+    height: 25px;
+    padding: 2px;
     border: 1px solid gray;
     transition: color 200ms ease,
                 border-color 200ms ease;
 }
 .delete:hover {
+    padding: 4px 2px 2px 4px;
     cursor: pointer;
     color: red;
     border-color: red;
 }
-
 .successful-update {
     position: absolute;
-    top: 200px;
-    border: 1px solid red;
+    width: 200px;
+    top: 150px;
+}
+.successful-update-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 50px auto;
+    padding: 32px 8px 16px 8px;
+    text-align: center;
+    box-shadow: 3px 3px 4px gray;
+    border: 2px solid var(--secondary-color);
     background-color: #fff;
+}
+.successful-update p {
+    font-size: 120%;
+}
+.successful-update .delete {
+    margin: 10px;
+    align-self: flex-end;
 }
 
 .green {
@@ -79,7 +107,15 @@ input {
 .red {
     border-color: red;
 }
-
+#btn-azur-sadnice {
+    margin-top: 30px;
+    transition: border-color 200ms ease,
+                color 200ms ease;
+}
+#btn-azur-sadnice.blue:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
 /* ANIMATION */
 @keyframes show-up {
     from {
@@ -87,6 +123,6 @@ input {
     }
     to {
         color: #fff;
-        background-color: var(--secondary-color);
+        background-color: var(--secondary-color)
     }
 }

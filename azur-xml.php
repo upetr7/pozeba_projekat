@@ -14,6 +14,8 @@
         include('inc/header.inc.html');
 
         if($_SERVER['REQUEST_METHOD'] == 'POST') {
+            echo 'postic';
+
             $dom = new DOMDocument();
             $url_sadnice = 'xml/sadnice.xml';
             $url_pozebe = 'xml/pozebe.xml';
@@ -26,8 +28,6 @@
             $type; // type=0 sadnice | type=false pozebe 
             $type = strpos($post_key[1], $arr_key_sadnice[1]);
 
-            
-            
             if($type !== false) {
                 $dom->load($url_sadnice);
                 $sadnice = $dom->firstChild;
@@ -38,7 +38,6 @@
                         $field = $dom->createElement($arr_key_sadnice[$i], $_POST[$post_key[$i + $j * 3]]);
                         $el->appendChild($field);
                     }
-                    print_r($el);
                     $sadnice->appendChild($el);
                 }
                 echo $dom->save($url_sadnice);
@@ -56,11 +55,7 @@
                 echo $dom->save($url_pozebe);
             }
             
-
-
-
-
-            // include('inc/azur-uspesno.inc.html');
+            include('inc/azur-uspesno.inc.html');
         }
         
     ?>
@@ -88,10 +83,9 @@
         <button  id="btn-azur-sadnice" disabled="disabled" form="sadnice">Azuriraj sadnice</button>
         <!-- end sadnice form -->
         <form action="azur-xml.php" method="post" id="pozebe">
-            pozebe
             <div class="fields-nm">
                 <ul>
-                    <li>Naziv</li>
+                    <li>Pozebe</li>
                     <li>Lokacija</li>
                     <li>Temperatura</li>
                     <li>Itd</li>
