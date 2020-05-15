@@ -1,29 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sadnice>
     <sadnica>
-        <naziv>Крушка</naziv>
-        <lokacija>Чачак</lokacija>
-        <opis>Опис за крушку - Чачак</opis>
+        <name>Крушка</name>
+        <location>Чачак</location>
+        <desc>Опис за крушку - Чачак</desc>
     </sadnica>
     <sadnica>
-        <naziv>Јабука</naziv>
-        <lokacija>Ариље</lokacija>
-        <opis>Опис за јабуку - Ариље</opis>
+        <name>Јабука</name>
+        <location>Ариље</location>
+        <desc>Опис за јабуку - Ариље</desc>
     </sadnica>
     <sadnica>
-        <naziv>Шљива</naziv>
-        <lokacija>Ваљево</lokacija>
-        <opis>Опис за шљиву - Ваљево</opis>
+        <name>Шљива</name>
+        <location>Ваљево</location>
+        <desc>Опис за шљиву - Ваљево</desc>
     </sadnica>
     <sadnica>
-        <naziv>Шљива</naziv>
-        <lokacija>Краљево</lokacija>
-        <opis>Опис за шљиву - Краљево</opis>
+        <name>Шљива</name>
+        <location>Краљево</location>
+        <desc>Опис за шљиву - Краљево</desc>
     </sadnica>
     <sadnica>
-        <naziv>Трешља</naziv>
-        <lokacija>Ваљево</lokacija>
-        <opis>Опис за трешњу - Ваљево</opis>
+        <name>Трешља</name>
+        <location>Ваљево</location>
+        <desc>Опис за трешњу - Ваљево</desc>
+    </sadnica>
+    <sadnica>
+        <name>UROS</name>
+        <location>PETROVIC</location>
+        <temperature>27</temperature>
+        <desc>ITDUROS</desc>
+    </sadnica>
+    <sadnica>
+        <name>NEMANJA</name>
+        <location>BOGICEVIC</location>
+        <temperature>23</temperature>
+        <desc>ITDNEMANJA</desc>
     </sadnica>
 </sadnice>
-

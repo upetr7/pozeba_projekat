@@ -50,14 +50,16 @@ function checkAll(input) {
             field.style.borderColor = 'green'
 }
 function checkTextualInput() {
-    if(isNaN(this.value) && this.value.length > 0)
+    // Ispravka this.value.length > 0
+    if(isNaN(this.value) && this.value.length)
         this.style.borderColor = 'green'
     else
         this.style.borderColor = 'red'
     checkAll(this)
 }
 function checkNumericInput() {
-    if(!isNaN(this.value) && this.value.length > 0)
+    // Ispravka this.value.length > 0
+    if(!isNaN(this.value) && this.value.length)
         this.style.borderColor = 'green'
     else
         this.style.borderColor = 'red'

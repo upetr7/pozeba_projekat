@@ -48,8 +48,8 @@
                 $ima = 0; // >ima< sluzi za ispis pot_poruke i za bojenje teksta uz pomoc js-a
                 // Provera da li postoji prispela sadnica u bazi podataka
                 foreach($xml_arr as $sadnica) {
-                    if(strtolower($sadnica->naziv->__toString()) == $vrsta_sadnice && 
-                        strtolower($sadnica->lokacija->__toString()) == $lokacija) {
+                    if(strtolower($sadnica->name->__toString()) == $vrsta_sadnice && 
+                        strtolower($sadnica->location->__toString()) == $lokacija) {
                         echo $pot_poruka.'<br>'; 
                         ++$ima; 
                         echo 'ОПИС: '.$sadnica->opis->__toString().'<br>';
@@ -69,5 +69,7 @@
         else echo $ima_script_0; 
         echo '</script>';
     ?>
+
+    <script src="js/header.js"></script>
 </body>
 </html>

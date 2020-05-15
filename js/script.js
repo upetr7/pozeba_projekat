@@ -1,8 +1,7 @@
 'use strict'
 
 // Pribavljanje html objekata
-const vrsta_sadnice = document.getElementById('sel_vrsta_sadnice')
-const lokacija = document.getElementById('sel_lokacija')
+// Prebaci na eng indentifikatore i u html
 const povrsina = document.getElementById('povrsina')
 const btnPosalji  = document.getElementById('posalji')
 

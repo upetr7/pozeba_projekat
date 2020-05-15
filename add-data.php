@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Azuriranje XML</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- Promeni ime u add-xml.css -->
     <link rel="stylesheet" href="css/azur-xml.css">
 </head>
 
@@ -17,15 +18,16 @@
             echo 'postic';
 
             $dom = new DOMDocument();
+            // Dodaj file_exist
             $url_sadnice = 'xml/sadnice.xml';
             $url_pozebe = 'xml/pozebe.xml';
 
             $post_key = array_keys($_POST);
             $arr_key_sadnice = ['name', 'location', 'temperature', 'desc'];
-            $arr_key_pozebe = ['key1', 'key2', 'key3']; 
+            $arr_key_pozebe = ['key1', 'key2', 'key3', 'key4']; 
 
             // Odredjivanje koju xml datoteku treba popuniti
-            $type; // type=0 sadnice | type=false pozebe 
+            // type=0 sadnice | type=false pozebe 
             $type = strpos($post_key[1], $arr_key_sadnice[1]);
 
             if($type !== false) {
@@ -35,7 +37,8 @@
                 for($j = 0; $j < (count($_POST) / count($arr_key_sadnice)) - 1; $j++){
                     $el = $dom->createElement('sadnica');
                     for($i = 0; $i < count($arr_key_sadnice); $i++) {
-                        $field = $dom->createElement($arr_key_sadnice[$i], $_POST[$post_key[$i + $j * 3]]);
+                        // count($arr_key_pozebe) - 1 za broj u $i + $j * >X<
+                        $field = $dom->createElement($arr_key_sadnice[$i], $_POST[$post_key[$i + $j * count($arr_key_sadnice)]]);
                         $el->appendChild($field);
                     }
                     $sadnice->appendChild($el);
@@ -45,9 +48,9 @@
                 $dom->load($url_pozebe);
                 $pozebe = $dom->firstChild;
                 for($j = 0; $j < (count($_POST) / count($arr_key_pozebe)) - 1; $j++){
-                    $el = $dom->createElement('sadnica');
+                    $el = $dom->createElement('pozeba');
                     for($i = 0; $i < count($arr_key_pozebe); $i++) {
-                        $field = $dom->createElement($arr_key_pozebe[$i], $_POST[$post_key[$i + $j * 3]]);
+                        $field = $dom->createElement($arr_key_pozebe[$i], $_POST[$post_key[$i + $j * count($arr_key_pozebe)]]);
                         $el->appendChild($field);
                     }
                     $pozebe->appendChild($el);
@@ -55,6 +58,7 @@
                 echo $dom->save($url_pozebe);
             }
             
+            // Promeni ime u add-uspesno.inc.html
             include('inc/azur-uspesno.inc.html');
         }
         
@@ -70,7 +74,7 @@
             </ul>
         </div>
         <!-- sadnice form -->
-        <form action="azur-xml.php" method="post" id="sadnice">
+        <form action="add-data.php" method="post" id="sadnice">
             <div class="fields-nm">
                 <ul>
                     <li>Naziv</li>
@@ -82,7 +86,7 @@
         </form>
         <button  id="btn-azur-sadnice" disabled="disabled" form="sadnice">Azuriraj sadnice</button>
         <!-- end sadnice form -->
-        <form action="azur-xml.php" method="post" id="pozebe">
+        <form action="add-data.php" method="post" id="pozebe">
             <div class="fields-nm">
                 <ul>
                     <li>Pozebe</li>
@@ -95,8 +99,12 @@
         <button  id="btn-azur-pozebe" disabled="disabled" form="pozebe">Azuriraj pozebe</button>
         <!-- end pozebe form -->
     </div>
+    <?php
+		include('inc/footer.inc.html');
+	?>
     <!-- SCRIPT -->
     <script src="js/azur-xml.js"></script>
+    <script src="js/header.js"></script>
 </body>
 
 </html>

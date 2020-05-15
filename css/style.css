@@ -6,16 +6,26 @@
 :root {
     --primary-color: rgb(0, 102, 236);
     --secondary-color: rgb(55, 245, 55);
+    --anchor-color: rgb(248, 99, 0);
+    --anchor-color-hover: rgb(187, 83, 14);
+}
+a {
+    text-decoration: none;
+    color: var(--anchor-color);
+    transition: color 200ms ease;
 }
 body {
     font-family: sans-serif;
     color: rgb(83, 83, 83);
 }
 .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     text-align: center;
     border-bottom: 2px solid var(--primary-color);
     background-color: #fff;
-
 }
 .header h1 {
     margin: 0px 30px !important;
@@ -24,6 +34,38 @@ body {
 .header h2 {
     text-transform: uppercase;
     font-size: 110%;
+}
+.header .nav {
+    
+}
+.header .nav ul {
+    padding: 8px;
+    background-color: rgba(255,255,255, 0.9);
+}
+.header .nav li {
+    position: relative;
+}
+.header .nav > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+.header .nav > ul > li {
+    padding: 4px;
+    margin: 0 4px;
+} 
+.header .nav li > ul {
+    display: none;
+    position: absolute;
+    width: 120px;
+    border-left: 1px solid gray
+}
+.header .nav li > ul li {
+    padding: 4px;
+}
+.header .nav a:hover {
+    color: var(--anchor-color-hover)
 }
 .container {
     width: 500px;
@@ -110,4 +152,10 @@ h2 {
 .xml button:hover {
     border-color: var(--secondary-color);
     cursor: pointer;
+}
+.footer {
+    min-height: 200px;
+    text-align: center;
+    padding: 50px;
+    border-top: 2px solid var(--primary-color)
 }

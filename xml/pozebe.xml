@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pozebe>
+
+    <pozeba>
+        <key1>P1</key1>
+        <key2>L1</key2>
+        <key3>T1</key3>
+        <key4>I1</key4>
+    </pozeba>
+    <pozeba>
+        <key1>P2</key1>
+        <key2>L2</key2>
+        <key3>T2</key3>
+        <key4>I2</key4>
+    </pozeba>
+</pozebe>

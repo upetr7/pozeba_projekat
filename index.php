@@ -15,6 +15,7 @@
 		include('inc/header.inc.html');
 
 		// Ukljucivanje xml objekta
+		$xml;
 		$url = 'xml/sadnice.xml';
 		if(file_exists($url)) $xml = simplexml_load_file($url);
         else exit('Ne mogu pronaci datoteku!');
@@ -22,6 +23,7 @@
 		// Pravljenje moga niza radi lakseg upravljanja
 		$xml_arr = [];
 		foreach($xml->sadnica as $sadnica) array_push($xml_arr, $sadnica);
+
 	?>
 	<div class="container">
 		<form action="info.php" method="get">
@@ -32,8 +34,8 @@
 						// Pravljenje niza od neponavljajucih elemenata
 						$ubaceni_arr = [];
 						foreach($xml_arr as $sadnica) 
-							if(!in_array($sadnica->naziv->__toString(), $ubaceni_arr)) 
-								array_push($ubaceni_arr, $sadnica->naziv->__toString());
+							if(!in_array($sadnica->name->__toString(), $ubaceni_arr)) 
+								array_push($ubaceni_arr, $sadnica->name->__toString());
 						sort($ubaceni_arr); // Sortiranje radi lakseg koriscenja
 						// Generisanje html koda za select - option
 						foreach($ubaceni_arr as $sadnica)
@@ -47,8 +49,8 @@
 					<?php 
 						$ubaceni_arr = [];
 						foreach($xml_arr as $sadnica) 
-							if(!in_array($sadnica->lokacija->__toString(), $ubaceni_arr)) 
-								array_push($ubaceni_arr, $sadnica->lokacija->__toString());
+							if(!in_array($sadnica->location->__toString(), $ubaceni_arr)) 
+								array_push($ubaceni_arr, $sadnica->location->__toString());
 						sort($ubaceni_arr);
 						foreach($ubaceni_arr as $lokacija)
 							echo '<option value="'.strtolower($lokacija).'" >'.$lokacija.'</option>';
@@ -62,12 +64,15 @@
 			<button type="submit" id="posalji" disabled>ПОШАЉИ</button>
 		</form>
 	</div>
-
+	<?php
+		include('inc/footer.inc.html');
+	?>
 	<div class="xml">
 		<button id="xml">Azururaj bazu</button>
 	</div>
 
 	<script src="js/script.js"></script>
+	<script src="js/header.js"></script>
 </body>
 
 </html>
