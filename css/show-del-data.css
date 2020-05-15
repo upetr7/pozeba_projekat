@@ -1,0 +1,74 @@
+.container {
+    width: 1024px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+
+}
+.container > div {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid lightgray;
+    transition: box-shadow 200ms ease;
+}
+.container > div:hover {
+    box-shadow: 2px 2px rgb(214, 214, 214);
+}
+h3 {
+    margin: 4px 6px 12px 6px;
+    padding:4px; 
+    border-bottom: 1px solid var(--primary-color);
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid gray;
+    overflow: scroll;
+}
+th, td {
+    border: 1px solid gray;
+    padding: 4px
+}
+th {
+    background-color: rgb(211, 211, 211);
+}
+tr:nth-child(2n) {
+    background-color: rgb(255, 255, 255);
+}
+tr:nth-child(2n + 1) {
+    background-color: rgb(241, 239, 239);
+}
+tr {
+    transition: transform 100ms ease, 
+                color 200ms ease;
+}
+tr:nth-child(n + 1):hover {
+    transform: scale(1.01);
+    color: #000
+}
+
+.delete-check {
+    border: 1px solid transparent;
+}
+.delete-check:hover {
+    border: 1px solid red;
+    color: red;
+    cursor: pointer;
+}
+.delete-check.delete-clicked:hover {
+    /* Dodaj ovde animation */
+}
+@keyframes delete-red {
+    from {
+        background-color: #fff;
+    }
+    to {
+        background-color: red;
+    }
+}
+
+button {
+    margin: 20px 0;
+}
