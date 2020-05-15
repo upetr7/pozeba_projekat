@@ -7,7 +7,7 @@
     <title>Azuriranje XML</title>
     <link rel="stylesheet" href="css/style.css">
     <!-- Promeni ime u add-xml.css -->
-    <link rel="stylesheet" href="css/azur-xml.css">
+    <link rel="stylesheet" href="css/add-data.css">
 </head>
 
 <body>
@@ -65,45 +65,45 @@
     ?>
 
     <div class="container">
-        <h2>AZURIRAJ XML</h2>
+        <h2>Додај у базу података</h2>
         <hr>
         <div class="choose-frm">
             <ul>
-                <li>Sadnice</li>
-                <li>Pozebe</li>
+                <li>Саднице</li>
+                <li>Позебе</li>
             </ul>
         </div>
         <!-- sadnice form -->
         <form action="add-data.php" method="post" id="sadnice">
             <div class="fields-nm">
                 <ul>
-                    <li>Naziv</li>
-                    <li>Lokacija</li>
-                    <li>Temperatura</li>
-                    <li>Itd</li>
+                    <li>Поље 1</li>
+                    <li>Поље 2</li>
+                    <li>Поље 3</li>
+                    <li>Поље 4</li>
                 </ul>
             </div>
         </form>
-        <button  id="btn-azur-sadnice" disabled="disabled" form="sadnice">Azuriraj sadnice</button>
+        <button  id="btn-azur-sadnice" disabled="disabled" form="sadnice">Додај</button>
         <!-- end sadnice form -->
         <form action="add-data.php" method="post" id="pozebe">
             <div class="fields-nm">
                 <ul>
-                    <li>Pozebe</li>
-                    <li>Lokacija</li>
-                    <li>Temperatura</li>
-                    <li>Itd</li>
+                    <li>Поље 1</li>
+                    <li>Поље 2</li>
+                    <li>Поље 3</li>
+                    <li>Поље 4</li>
                 </ul>
             </div>
         </form>
-        <button  id="btn-azur-pozebe" disabled="disabled" form="pozebe">Azuriraj pozebe</button>
+        <button  id="btn-azur-pozebe" disabled="disabled" form="pozebe">Додај</button>
         <!-- end pozebe form -->
     </div>
     <?php
 		include('inc/footer.inc.html');
 	?>
     <!-- SCRIPT -->
-    <script src="js/azur-xml.js"></script>
+    <script src="js/add-data.js"></script>
     <script src="js/header.js"></script>
 </body>
 

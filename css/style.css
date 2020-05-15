@@ -140,19 +140,6 @@ h2 {
     margin: auto;
 }
 
-.xml {
-    position: absolute;
-    top: 200px;
-    right: 30px;
-}
-.xml button {
-    border-color: var(--primary-color);
-    transition: border-color 200ms ease;
-}
-.xml button:hover {
-    border-color: var(--secondary-color);
-    cursor: pointer;
-}
 .footer {
     min-height: 200px;
     text-align: center;

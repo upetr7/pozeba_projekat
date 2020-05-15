@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Прикажи - Обриши - ПОЗЕБА</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/show-del-data.css">
 </head>
@@ -64,12 +64,12 @@
     <div class="container">
         <!-- CONTAINER SADNICE -->
         <div class="container-sadnice">
-            <h3>Sadnice</h3>
+            <h3>Саднице</h3>
             <table>
                 <tr>
-                    <th>Ime</th>
-                    <th>Lokacija</th>
-                    <th>Opis</th>
+                    <th>Поље 1</th>
+                    <th>Поље 2</th>
+                    <th>Поље 3</th>
                 </tr>
                 <?php
                     foreach($arr_sadnice as $sadnica) {
@@ -77,22 +77,22 @@
                         echo '<td>'.$sadnica->name.'</td>';
                         echo '<td>'.$sadnica->location.'</td>';
                         echo '<td>'.$sadnica->desc.'</td>';
-                        echo '<td>'.'<div class="delete-check">Delete</div>'.'</td>';
+                        echo '<td>'.'<div class="delete-check">Избриши</div>'.'</td>';
                         echo '</tr>';
                     }
                 ?>
             </table>
-            <button id="btn-sadnice" disabled="disabled">Izbrisi izabrane sadnice</button>
+            <button id="btn-sadnice" disabled="disabled">Избриши изабрано</button>
         </div>
         <!-- CONTAINER POZEBE -->
         <div class="container-pozebe">
-            <h3>Pozebe</h3>
+            <h3>Позебе</h3>
             <table>
                 <tr>
-                    <th>Ime</th>
-                    <th>Surname</th>
-                    <th>Opis</th>
-                    <th>Etc</th>
+                    <th>Поље 1</th>
+                    <th>Поље 2</th>
+                    <th>Поље 3</th>
+                    <th>Поље 4</th>
                 </tr>
                 <?php
                     foreach($arr_pozebe as $pozeba) {
@@ -101,12 +101,12 @@
                         echo '<td>'.$pozeba->key2.'</td>';
                         echo '<td>'.$pozeba->key3.'</td>';
                         echo '<td>'.$pozeba->key4.'</td>';
-                        echo '<td>'.'<div class="delete-check">Delete</div>'.'</td>';
+                        echo '<td>'.'<div class="delete-check">Избриши</div>'.'</td>';
                         echo '</tr>';
                     }
                 ?>
             </table>
-            <button id="btn-pozebe" disabled="disabled">Izbrisi izabrane pozebe</button>
+            <button id="btn-pozebe" disabled="disabled">Избриши изабрано</button>
         </div>
         <!-- END CONTAINER POZEBE -->
     </div>
