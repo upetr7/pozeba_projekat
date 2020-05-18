@@ -45,27 +45,32 @@ tr {
                 color 200ms ease;
 }
 tr:nth-child(n + 1):hover {
-    transform: scale(1.01);
-    color: #000
+    color: rgb(27, 27, 27)
+}
+tr td:last-child {
+    width: 100px;
 }
 
 .delete-check {
     border: 1px solid transparent;
+    border-radius: 2px;
 }
 .delete-check:hover {
     border: 1px solid red;
     color: red;
     cursor: pointer;
 }
-.delete-check.delete-clicked:hover {
-    /* Dodaj ovde animation */
+.delete-check.delete-clicked {
+    animation: delete-red ease-in-out 1ms 1 forwards
 }
 @keyframes delete-red {
     from {
         background-color: #fff;
+        color: red
     }
     to {
         background-color: red;
+        color: #fff
     }
 }
 
